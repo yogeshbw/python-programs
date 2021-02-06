@@ -10,8 +10,6 @@ def highlow(userguess,answer):
 
 def isPrime(n, i = 2): 
    
-  
-    # Base cases 
     if(n%2==0):
        print('Number is Prime')
     elif (n % i == 0): 
