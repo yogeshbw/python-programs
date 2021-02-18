@@ -2,18 +2,14 @@ import random
 import sys
 from msvcrt import getch
 
+#To find given value is high or low than the actual value
 def highlow(userguess,answer):
     if(userguess>=answer):
         print("Your guess is higher than Answer")
     else:print("Your guess is smaller than answer")
-
-
-    
-
-def isPrime(n, i = 2): 
-   
   
-    # Base cases 
+#To find given value is prime or not
+def isPrime(n, i = 2):  
     if(n%2==0):
        print('Number is Prime')
     elif (n % i == 0): 
@@ -21,7 +17,7 @@ def isPrime(n, i = 2):
         return isPrime(n, i + 1) 
     else :print(' It is Prime')
 
-
+#To find given value is odd or even
 def oddeven(no):
     if(no % 2 == 0):
         print("The number is even \n")
@@ -30,16 +26,10 @@ def oddeven(no):
 
 
 def guessbyuser(x):
-
     ran_number = random.randint(1, x)
-    
     guess = int(0)
-
-    while guess != ran_number :
-    
-        #sys.exit("Input is not natural number")
+    while guess != ran_number
         guess = int(input(f"---Press Zero to quit---\nor\nGuess the number between 1 to {range1}  : "))
-        
         if (guess==0): 
             print("---->>>>Bye<<<<----\n") 
             break
@@ -57,10 +47,9 @@ def guessbyuser(x):
                 print("\n---->>>>Bye<<<<----")
                 exit(0)
         print(ran_number)
-        numx=random.randint(2,4)
-	    
+        numx=random.randint(2,4)	    
         #if(numx==1):
-         # 	fib(ran_number)
+        	#fib(ran_number)
         if(numx==2):
             print("Hint: ")
             highlow(guess,ran_number)
@@ -72,7 +61,6 @@ def guessbyuser(x):
             oddeven(ran_number)
 
 # >>>>>>Driver Code<<<<<<
-
 range1 = int(input(f"\n***Welcome To Number Guessing Game***\n Enter Max limit for the number  :"))
 if(range1<1):
     sys.exit("Input is Invalid\n---->>>>Bye<<<<----\nTry again with natural number\n")
