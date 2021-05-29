@@ -46,7 +46,7 @@ def guessbyuser(x):
             else:
                 print("\n---->>>>Bye<<<<----")
                 exit(0)
-        print(ran_number)
+        #print(ran_number)
         numx=random.randint(2,4)	    
         #if(numx==1):
         	#fib(ran_number)
